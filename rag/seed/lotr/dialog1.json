@@ -1,0 +1,28 @@
+{
+  "dialogue": [
+    {
+      "speaker": "Samwise Gamgee",
+      "text": "Mr. Frodo, you haven't slept since we crossed the slag hills. Let me carry the Ring for just a few hours while you rest your eyes."
+    },
+    {
+      "speaker": "Frodo Baggins",
+      "text": "Get back! Keep your hands away from my chain, Sam. It is my burden, and no one else's."
+    },
+    {
+      "speaker": "Samwise Gamgee",
+      "text": "I don't want to keep it, sir. I only want to help share the load so you make it to Mount Doom alive."
+    },
+    {
+      "speaker": "Frodo Baggins",
+      "text": "You cannot help! You don't know what it feels like—and the Ring will not belong to you, not even for an hour."
+    },
+    {
+      "speaker": "Samwise Gamgee",
+      "text": "Forgive me, Mr. Frodo. I spoke out of turn. Sit down then, and I'll keep watch over the ridge while you sleep."
+    },
+    {
+      "speaker": "Frodo Baggins",
+      "text": "Just stay where I can see you, Sam. Do not come closer while I am asleep."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "characters": [
+    {
+      "name": "Harry Potter",
+      "desc": "A young Gryffindor wizard famous for surviving a dark curse, who tends to investigate dangers on his own.",
+      "gender": "male",
+      "age": 12,
+      "personality": "A brave, curious, and stubborn young wizard who willingly breaks school rules when he suspects someone is plotting something dangerous at Hogwarts.",
+      "voice": {
+        "tone": "urgent and determined",
+        "speech_style": "Direct and earnest, focused on immediate action rather than consequences."
+      },
+      "specie": "human",
+      "traits": ["brave", "curious", "stubborn", "impulsive"]
+    },
+    {
+      "name": "Hermione Granger",
+      "desc": "A top student from a non-magical family who knows every rule and spell in the textbooks.",
+      "gender": "female",
+      "age": 12,
+      "personality": "A brilliant, rule-abiding witch who excels at spells and magic theory. She worries constantly about getting expelled or losing Gryffindor house points, yet always ends up helping her friends.",
+      "voice": {
+        "tone": "anxious and bossy",
+        "speech_style": "Fast-paced, articulate, and quick to cite school rules and practical risks."
+      },
+      "specie": "human",
+      "traits": ["intelligent", "rule-abiding", "anxious", "loyal"]
+    },
+    {
+      "name": "Ron Weasley",
+      "desc": "The youngest son of a large wizarding family and Harry's best friend, always ready with a joke.",
+      "gender": "male",
+      "age": 12,
+      "personality": "A loyal, humorous wizard from a large magical family who dislikes extra studying and is easily spooked by dark corridors, though he never abandons his friends.",
+      "voice": {
+        "tone": "reluctant and sarcastic",
+        "speech_style": "Casual, expressive, and full of complaints mixed with dry humor."
+      },
+      "specie": "human",
+      "traits": ["loyal", "funny", "fearful", "lazy"]
+    }
+  ]
+}

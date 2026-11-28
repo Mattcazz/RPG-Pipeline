@@ -1,34 +1,22 @@
 {
-  "narrative": "The kingdom of Valdrenn is a mountain realm whose villages depend on a single trade road. After a long winter, travelers speak of strange lights over the northern pass, and the crown has quietly stopped sending patrols there.",
+  "narrative": "Middle-earth is threatened by Sauron, a dark lord seeking the One Ring—a cursed golden ring that grants immense power and corrupts anyone who carries it. Two hobbits are traveling across the barren volcanic wasteland of Mordor toward Mount Doom, the only fire where the Ring can be destroyed.",
   "genre": "fantasy",
   "tone": "dark",
   "rules": [
-    "Magic exists and is channeled through wands and spoken spells.",
-    "Giants live in the high peaks and avoid human settlements.",
-    "Every spell costs the caster physical stamina."
+    "The One Ring can only be destroyed by throwing it into the fires of Mount Doom.",
+    "Carrying the One Ring drains the bearer's physical strength and slowly twists their mind with paranoia and obsession.",
+    "Hobbits are small, resilient folk who are naturally resistant to the Ring's corruption, though not immune."
   ],
-  "species": [
-    "Humans",
-    "Giants"
-  ],
-  "classes": [
-    "Mage",
-    "Warrior",
-    "Merchant",
-    "Scout"
-  ],
+  "species": ["hobbit", "orc", "human"],
+  "classes": ["Ring-bearer", "companion", "dark lord"],
   "places": [
     {
-      "name": "Valdrenn",
-      "desc": "A remote mountain kingdom characterized by steep valleys, fortified settlements and harsh winters. Its economy relies heavily on mining, livestock and trade with neighboring territories. Ancient traditions and royal authority shape everyday life, while isolated communities often develop their own customs."
+      "name": "Mordor",
+      "desc": "A barren volcanic wasteland ruled by Sauron and crawling with orcs."
     },
     {
-      "name": "Northern Pass",
-      "desc": "A vast mountain passage connecting Valdrenn with the northern territories. Its narrow trails, unstable cliffs and unpredictable weather make it difficult to cross. Scattered watchtowers and abandoned fortifications suggest that it once held considerable strategic importance."
-    },
-    {
-      "name": "High Peaks",
-      "desc": "An extensive mountain range dominated by towering summits, glaciers and deep ravines. The region is sparsely inhabited due to its extreme conditions and difficult terrain. Giants are believed to inhabit its highest elevations, where ancient ruins and unexplored caves can also be found."
+      "name": "Mount Doom",
+      "desc": "The volcano where the One Ring was forged and the only place it can be destroyed."
     }
   ]
 }

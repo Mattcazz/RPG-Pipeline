@@ -1,0 +1,28 @@
+{
+  "dialogue": [
+    {
+      "speaker": "Obi-Wan Kenobi",
+      "text": "We had a clear defensive perimeter, Anakin. When you charged ahead alone, you left our flank completely exposed to heavy laser fire."
+    },
+    {
+      "speaker": "Anakin Skywalker",
+      "text": "If I hadn't charged, their commander would have escaped with the Republic's fleet coordinates. My plan worked, Master."
+    },
+    {
+      "speaker": "Obi-Wan Kenobi",
+      "text": "You nearly lost your lightsaber—and your life—acting out of anger and impatience. A Jedi relies on focus, not reckless impulse."
+    },
+    {
+      "speaker": "Anakin Skywalker",
+      "text": "I wasn't acting out of anger. I'm simply strong enough in the Force to end battles quickly, even if you refuse to see it."
+    },
+    {
+      "speaker": "Obi-Wan Kenobi",
+      "text": "Raw strength without control is a liability, Anakin. Until you learn restraint, you are a danger to yourself and everyone under your command."
+    },
+    {
+      "speaker": "Anakin Skywalker",
+      "text": "Fine. Next time I'll wait for your permission while the enemy slips right through our fingers."
+    }
+  ]
+}

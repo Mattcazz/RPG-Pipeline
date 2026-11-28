@@ -1,0 +1,15 @@
+{
+  "conflict": "During a halt in the ash wastes of Mordor, Samwise Gamgee notices Frodo Baggins is barely able to stand under the weight of the One Ring and offers to carry it for a while to give him rest. Frodo violently refuses, convinced Sam is trying to steal the Ring for himself.",
+  "conflict_genre": [
+    "drama"
+  ],
+  "relationships": [
+    {
+      "characters": [
+        "Frodo Baggins",
+        "Samwise Gamgee"
+      ],
+      "description": "Lifelong friends and fellow travelers; Sam's devotion is tested by the Ring's growing paranoia inside Frodo's mind."
+    }
+  ]
+}

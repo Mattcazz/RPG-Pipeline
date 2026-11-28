@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Frodo Baggins",
+      "desc": "The hobbit Ring-bearer tasked with carrying the One Ring to Mount Doom.",
+      "gender": "male",
+      "age": 50,
+      "personality": "A gentle, determined hobbit bearing the One Ring around his neck. Exhausted by the journey, he is becoming increasingly secretive, possessive of the Ring, and suspicious of others.",
+      "voice": {
+        "tone": "weary and guarded",
+        "speech_style": "Quiet, strained sentences that turn defensive or sharp whenever the Ring is mentioned."
+      },
+      "specie": "hobbit",
+      "class": "Ring-bearer",
+      "traits": ["determined", "gentle", "exhausted", "paranoid"]
+    },
+    {
+      "name": "Samwise Gamgee",
+      "desc": "Frodo's gardener and devoted companion, who follows him into Mordor.",
+      "gender": "male",
+      "age": 38,
+      "personality": "Frodo's fiercely loyal friend and traveling companion. Practical, hopeful, and grounded, he focuses on rations, safety, and keeping Frodo alive at any cost.",
+      "voice": {
+        "tone": "earnest and protective",
+        "speech_style": "Plainspoken, warm, and persistent, often appealing to friendship and simple comforts."
+      },
+      "specie": "hobbit",
+      "class": "companion",
+      "traits": ["loyal", "practical", "hopeful", "protective"]
+    }
+  ]
+}

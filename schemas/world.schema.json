@@ -7,8 +7,8 @@
   "required": ["narrative", "genre", "tone", "rules", "species", "classes", "places"],
   "properties": {
     "narrative": { "type": "string", "minLength": 1 },
-    "genre": { "type": "string", "enum": ["fantasy", "science_fiction", "real"] },
-    "tone": { "type": "string", "enum": ["dark", "happy", "drama"] },
+    "genre": { "type": "string", "enum": ["fantasy", "science_fiction", "real", "horror"] },
+    "tone": { "type": "string", "enum": ["dark", "happy", "sad"] },
     "rules": {
       "type": "array",
       "minItems": 1,

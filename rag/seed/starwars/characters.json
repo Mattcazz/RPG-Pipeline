@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Obi-Wan Kenobi",
+      "desc": "A veteran Jedi Master and the mentor of Anakin, bound by duty and brotherly affection.",
+      "gender": "male",
+      "age": 35,
+      "personality": "A disciplined, patient, and by-the-book Jedi Master who strictly follows the Jedi Code. He cares deeply for his apprentice like a brother, though he constantly worries about his recklessness.",
+      "voice": {
+        "tone": "calm and measured",
+        "speech_style": "Articulate, composed, and slightly dry, often using gentle sarcasm or firm reminders of Jedi discipline."
+      },
+      "specie": "human",
+      "class": "Jedi Master",
+      "traits": ["disciplined", "patient", "loyal", "cautious"]
+    },
+    {
+      "name": "Anakin Skywalker",
+      "desc": "A powerful and gifted Jedi Padawan who chafes under the Order's restrictions.",
+      "gender": "male",
+      "age": 20,
+      "personality": "A gifted, impulsive young Jedi apprentice who believes raw power and bold action win battles faster than caution. He resents being held back and struggles to control his temper.",
+      "voice": {
+        "tone": "intense and impatient",
+        "speech_style": "Direct, emotional, and defensive, frequently challenging orders he finds too cautious."
+      },
+      "specie": "human",
+      "class": "Padawan",
+      "traits": ["gifted", "impulsive", "hot-tempered", "defiant"]
+    }
+  ]
+}

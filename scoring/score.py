@@ -21,7 +21,7 @@ from stages.characters import Characters
 from stages.conflict import Conflict
 from stages.dialog import Dialog
 from stages.world import World
-from scoring.embeddings import embed as embed_texts
+from llm import embed as embed_texts
 
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMAS = ROOT / "schemas"

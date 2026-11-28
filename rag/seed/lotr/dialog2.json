@@ -1,0 +1,28 @@
+{
+  "dialogue": [
+    {
+      "speaker": "Samwise Gamgee",
+      "text": "There's barely a sip left in the flask, Mr. Frodo, and only two crusts of bread. If we eat them now, we'll have nothing left for the walk back."
+    },
+    {
+      "speaker": "Frodo Baggins",
+      "text": "There won't be a walk back, Sam. We have just enough strength to reach Mount Doom and destroy the Ring. After that, nothing else matters."
+    },
+    {
+      "speaker": "Samwise Gamgee",
+      "text": "Don't talk like that. We didn't come all this way across Mordor just to lie down and die once the job is done."
+    },
+    {
+      "speaker": "Frodo Baggins",
+      "text": "Look around you, Sam. There is no food, no water, and hundreds of miles of ash between us and home."
+    },
+    {
+      "speaker": "Samwise Gamgee",
+      "text": "Then we take it one step at a time. Drink the last of the water now, Mr. Frodo—we'll worry about tomorrow after the Ring is in the fire."
+    },
+    {
+      "speaker": "Frodo Baggins",
+      "text": "You never stop hoping, do you, Sam? Very well. Help me up, and let's finish what we came to do."
+    }
+  ]
+}

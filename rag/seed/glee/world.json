@@ -1,0 +1,22 @@
+{
+  "narrative": "At William McKinley High School, the popular cheerleading squad (the Cheerios) and the underfunded show choir (New Directions) constantly fight over school budget and rehearsal spaces. New Directions must win an upcoming regional singing competition to avoid being shut down.",
+  "genre": "real",
+  "tone": "happy",
+  "rules": [
+    "New Directions is a high school show choir that will be disbanded if it loses the upcoming regional competition.",
+    "The Cheerios are the school's prestigious cheerleading squad, and their coach controls who stays on the team.",
+    "The school auditorium is a shared stage reserved through official written permits."
+  ],
+  "species": ["human"],
+  "classes": ["choir member", "cheerleader", "coach"],
+  "places": [
+    {
+      "name": "School auditorium",
+      "desc": "The main stage of McKinley High, shared by the choir and the cheerleaders through official permits."
+    },
+    {
+      "name": "Choir room",
+      "desc": "The small rehearsal room where New Directions practices and holds its meetings."
+    }
+  ]
+}
