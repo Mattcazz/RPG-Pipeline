@@ -10,5 +10,5 @@ class Conflict(Stage):
     model = "qwen3:4b"
     system_prompt = SYSTEM_PROMPT 
     user_prompt = USER_PROMPT 
-    filename = "conflict.txt"
+    filename = "conflict.json"
     schema_path = SCHEMAS_DIR / "conflict.schema.json"

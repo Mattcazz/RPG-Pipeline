@@ -12,11 +12,12 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["name", "gender", "age", "personality", "voice"],
+        "required": ["name", "desc", "gender", "age", "personality", "voice", "specie", "traits"],
         "properties": {
           "name": { "type": "string", "minLength": 1 },
+          "desc": {"type": "string", "minLength": 1},
           "gender": { "type": "string", "minLength": 1 },
-          "age": { "type": "integer", "minimum": 0, "maximum": 120 },
+          "age": { "type": "integer"},
           "personality": { "type": "string", "minLength": 1 },
           "voice": {
             "type": "object",
@@ -26,6 +27,13 @@
               "tone": { "type": "string", "minLength": 1 },
               "speech_style": { "type": "string", "minLength": 1 }
             }
+          },
+          "specie": { "type": "string", "minLength": 1},
+          "class": { "type": "string"},
+          "traits": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength" : 1}
           }
         }
       }

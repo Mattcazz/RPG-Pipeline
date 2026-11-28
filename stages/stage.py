@@ -21,10 +21,11 @@ class Stage:
     schema_path: Path  # JSON schema that constrains the model output
     params: dict = {}
 
-    def __init__(self, out_dir, run_id, metadata=None):
+    def __init__(self, out_dir, run_id, metadata=None, model=None):
         self.out_dir = Path(out_dir)  # folder of this run, e.g. output/<run_id>/
         self.run_id = run_id
         self.extra_metadata = metadata or {}
+        self.model = model if model is not None else self.model
 
     def build_prompt(self, **inputs):
         """Turn the inputs into the user prompt. Override for custom prompts."""

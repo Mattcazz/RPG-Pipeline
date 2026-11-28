@@ -4,7 +4,7 @@
   "title": "World",
   "type": "object",
   "additionalProperties": false,
-  "required": ["narrative", "genre", "tone", "rules"],
+  "required": ["narrative", "genre", "tone", "rules", "species", "classes", "places"],
   "properties": {
     "narrative": { "type": "string", "minLength": 1 },
     "genre": { "type": "string", "enum": ["fantasy", "science_fiction", "real", "horror"] },
@@ -13,6 +13,34 @@
       "type": "array",
       "minItems": 1,
       "items": { "type": "string", "minLength": 1 }
+    },
+    "species": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength" : 1}
+    },
+    "classes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength" : 1}
+    },
+    "places": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "desc"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "desc": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
     }
   }
 }

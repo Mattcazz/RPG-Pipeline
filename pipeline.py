@@ -42,6 +42,26 @@ def parse_args():
         "-n", "--runs", type=int, default=1,
         help="Number of runs to execute in a row. With --run-id and n > 1, run ids are <run-id>-1 ... <run-id>-n.",
     )
+    parser.add_argument(
+            "--llm-model", type=str, default="qwen3:4b",
+            help="Which LLM model to use as the default option for each of the stages",
+    )
+    parser.add_argument(
+            "--llm-model-world", type=str, default=None,
+            help="Which LLM model to use for the world stage, this overrides the default set by --llm-model",
+    )
+    parser.add_argument(
+            "--llm-model-characters", type=str, default=None,
+            help="Which LLM model to use for the characters stage, this overrides the default set by --llm-model",
+    )
+    parser.add_argument(
+            "--llm-model-conflict", type=str, default=None,
+            help="Which LLM model to use for the conflict stage, this overrides the default set by --llm-model",
+    )
+    parser.add_argument(
+            "--llm-model-dialog", type=str, default=None,
+            help="Which LLM model to use for the dialog stage, this overrides the default set by --llm-model",
+    )
     args = parser.parse_args()
     if args.runs < 1:
         parser.error("-n must be at least 1")
@@ -66,8 +86,15 @@ def run(args, run_id):
         encoding="utf-8",
     )
 
+    def model_for(args, name):
+        # Get specific stage llm model if available
+        if getattr(args, f"llm_model_{name}", None) is None:
+            # Get specified default llm model if available, otherwise None (this has a default of qwen3:4b so this should never return None but)
+            return getattr(args, f"llm_model", None)
+        return getattr(args, f"llm_model_{name}")
+
     metadata = {"live_stages": ",".join(args.live), "idea": args.idea}
-    stages = {name: cls(out_dir, run_id, metadata) for name, cls in STAGES.items()}
+    stages = {name: cls(out_dir, run_id, metadata, model=model_for(args, name)) for name, cls in STAGES.items()}
 
     def get(name, **inputs):
         stage = stages[name]

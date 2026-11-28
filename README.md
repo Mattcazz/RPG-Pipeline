@@ -25,13 +25,30 @@ idea ─▶ world ─▶ characters ─▶ conflict ─▶ dialog
 Run everything from the project root:
 
 ```bash
-python pipeline.py "A heist in a floating city"   # every stage calls the LLM
-python pipeline.py --live dialog                  # only dialog calls the LLM
-python pipeline.py --live characters,conflict     # several live stages
-python pipeline.py --live dialog --run-id my-test # name the run (default: a random UUID)
-python pipeline.py --live dialog -n 5             # 5 runs in a row (run ids: random UUIDs)
-python pipeline.py --live dialog -n 5 --run-id exp # 5 runs: exp-1 ... exp-5
+python pipeline.py "A heist in a floating city"               # every stage calls the LLM
+python pipeline.py "A heist in a floating city" --live dialog # only dialog calls the LLM
+python pipeline.py --live characters,conflict                 # several live stages
+python pipeline.py --live dialog --run-id my-test             # name the run (default: a random UUID)
+python pipeline.py --live dialog -n 5                         # 5 runs in a row (run ids: random UUIDs)
+python pipeline.py --live dialog -n 5 --run-id exp            # 5 runs: exp-1 ... exp-5
 ```
+
+### Running specific models
+
+By default, qwen3:4b is chosen for all stages
+
+`--llm-model` selects a different default model for all stages
+
+You may also specify a specific model for a specific stage, these options take priority over the default set with `--llm-model`
+
+`--llm-model-world` selects the LLM model that will be used for the world stage
+
+`--llm-model-characters` selects the LLM model that will be used for the world stage
+
+`--llm-model-conflict` selects the LLM model that will be used for the world stage
+
+`--llm-model-dialog` selects the LLM model that will be used for the world stage
+
 
 ### Live vs baseline
 
@@ -42,7 +59,7 @@ Every stage runs in one of two modes:
 
 `--live` chooses which stages are live (`world`, `characters`, `conflict`, `dialog`, a comma-separated list, or `all`, the default). All the others use their baseline. For example, `--live dialog` loads the world, characters and conflict from `baseline/` and makes a single LLM call for the dialog.
 
-The fixed artifacts are in [`baseline/`](baseline/), one file per stage: `world.txt`, `characters.txt`, `conflict.txt` and `dialog.txt`. They are JSON, matching the schemas in `schemas/`. They are shared by the whole group, so don't change them for a single experiment; agree on it first. To make a better baseline, copy a good file from `output/<run-id>/`.
+The fixed artifacts are in [`baseline/`](baseline/), one file per stage: `world.json`, `characters.json`, `conflict.json` and `dialog.json`. They match the schemas in `schemas/`. They are shared by the whole group, so don't change them for a single experiment; agree on it first. To make a better baseline, copy a good file from `output/<run-id>/`.
 
 The `idea` argument is only used by the `world` stage, so it has an effect only when `world` is live.
 
@@ -68,7 +85,7 @@ class Dialog(Stage):
     model = "qwen3:4b"
     system_prompt = SYSTEM_PROMPT
     user_prompt = USER_PROMPT          # template filled with the stage's inputs
-    filename = "dialog.txt"
+    filename = "dialog.json"
     schema_path = SCHEMAS_DIR / "dialog.schema.json"
     params = {"reasoning_effort": "none", "temperature": 0.7}
 ```

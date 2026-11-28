@@ -45,6 +45,6 @@ class Dialog(Stage):
     model = "qwen3:4b"
     system_prompt = SYSTEM_PROMPT
     user_prompt = USER_PROMPT
-    filename = "dialog.txt"
+    filename = "dialog.json"
     schema_path = SCHEMAS_DIR / "dialog.schema.json"
     params = {"temperature": 0.7}

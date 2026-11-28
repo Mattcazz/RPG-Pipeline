@@ -1,0 +1,45 @@
+{
+  "characters": [
+    {
+      "name": "Mira Dalvane",
+      "desc": "A royal scout from Valdrenn who has spent years exploring the kingdom's mountain valleys and monitoring its borders. She is experienced in tracking, navigation and survival in harsh environments. Her knowledge of the northern territories makes her a valuable asset to the crown.",
+      "gender": "female",
+      "age": 34,
+      "personality": "A disciplined royal scout who trusts evidence over rumors. She hides her fear of failing the crown behind a calm, controlled manner.",
+      "voice": {
+        "tone": "dry and measured",
+        "speech_style": "Short, precise sentences with little emotion."
+      },
+      "specie": "Human",
+      "class": "Scout",
+      "traits": [
+        "Highly observant",
+        "Excellent tracking and navigation skills",
+        "Experienced in mountain survival",
+        "Loyal to the crown",
+        "Distrustful of rumors and superstition"
+      ]
+    },
+    {
+      "name": "Tobren Ashfield",
+      "desc": "An elderly resident of a remote village in Valdrenn who once practiced magic before abandoning his life as a spell-caster. He has extensive knowledge of ancient spells, local traditions and the history of the northern pass. His past experiences have made him cautious about the consequences of magic.",
+      "gender": "male",
+      "age": 52,
+      "personality": "A village elder and former spell-caster. He is warm and talkative but stubborn, and he is protecting a secret about the northern pass.",
+      "voice": {
+        "tone": "warm but evasive",
+        "speech_style": "Rambling, uses proverbs and changes the subject when pressed."
+      },
+      "specie": "Human",
+      "class": "Mage",
+      "traits": [
+        "Formerly skilled in spoken spells and wand magic",
+        "Knowledgeable about ancient magic",
+        "Familiar with the history of the northern pass",
+        "Protective of his village",
+        "Secretive about his past",
+        "Stubborn and difficult to persuade"
+      ]
+    }
+  ]
+}
