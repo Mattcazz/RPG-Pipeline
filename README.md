@@ -12,13 +12,18 @@ idea ─▶ world ─▶ characters ─▶ conflict ─▶ dialog
    ```bash
    pip install -r requirements.txt
    ```
-2. **Ollama** running on `localhost:11434` with the model the stages use:
+2. **Environment variables**: copy `.env.example` to `.env` and fill it in (Langfuse keys, and `USERNAME`, which is sent to Langfuse as the user id).
+3. **Ollama and MongoDB**, through Docker (no local install needed):
    ```bash
-   ollama pull qwen3:4b
-   ollama pull nomic-embed-text           # only for the O6/O7 scoring metrics
-   curl http://localhost:11434/api/tags   # should return JSON
+   docker compose up -d      # starts Ollama (localhost:11434) and MongoDB (localhost:27017)
+   docker compose logs -f ollama-pull   # progress of the model download (first start only)
+   docker compose down       # stops everything; models and data stay in Docker volumes
+   docker compose down -v    # also deletes the models and the data
    ```
-3. **Environment variables**: copy `.env.example` to `.env` and fill it in (Langfuse keys, and `USERNAME`, which is sent to Langfuse as the user id).
+   - The models in `PULL_MODELS` (`.env`, default `qwen3:4b nomic-embed-text`) are downloaded on start. Add a model there if a stage starts using one. Models already downloaded are not fetched again.
+   - Ollama in Docker runs on the CPU, so `qwen3:4b` is slower than on a GPU.
+   - If you already run Ollama on your machine, start only MongoDB with `docker compose up -d mongo`. Or keep both and set `OLLAMA_PORT` (and `OLLAMA_URL`) in `.env` to avoid the port clash.
+   - The MongoDB collections (`inputs`, `dialogs`) are created by the Python code, not by Docker: `rag/db.py` has `ensure_schema()`, which runs on the first connection and is safe to repeat. Changing the schema there needs no data wipe.
 
 ## Running
 
@@ -68,7 +73,7 @@ The `idea` argument is only used by the `world` stage, so it has an effect only 
 | Path | What it is |
 |---|---|
 | `pipeline.py` | Entry point: parses the CLI, runs the stages in order |
-| `llm.py` | `run_llm(...)`: the single function that talks to the model (Ollama through the OpenAI client, traced by Langfuse) |
+| `llm.py` | The only code that talks to the model server (Ollama through the OpenAI client): `run_llm(...)`, traced by Langfuse, and `embed(...)`, not traced |
 | `stages/` | One class per stage, on top of the `Stage` base class in `stages/stage.py` |
 | `schemas/` | JSON schema for each stage's output; it constrains the model's answer |
 | `scoring/` | Objective rubric metrics (O1–O7) and the script that pushes them to Langfuse (see [Scoring](#scoring)) |

@@ -1,4 +1,8 @@
+import json
+
 from stages.stage import SCHEMAS_DIR, Stage
+from rag.serialize import serialize_input
+from rag.retriever import retrieve_examples
 
 SYSTEM_PROMPT = (
     "You are a dialog writer for an RPG. "
@@ -37,8 +41,10 @@ Characters:
 
 Conflict:
 {conflict}
-"""
 
+Here are example dialogs written for similar situations. Use them only as a reference for style, pacing and format. Do NOT copy their lines or characters:
+{examples}
+"""
 
 class Dialog(Stage):
     name = "dialog-writer"
@@ -48,3 +54,26 @@ class Dialog(Stage):
     filename = "dialog.json"
     schema_path = SCHEMAS_DIR / "dialog.schema.json"
     params = {"temperature": 0.7}
+
+    def build_prompt(self, **inputs):
+        examples = self.format_examples(self.get_top_examples(**inputs))
+        return self.user_prompt.format(**inputs, examples=examples)
+
+    def get_top_examples(self, world, characters, conflict):
+        """Retrieve the stored dialogs whose inputs are most similar to the current ones.
+
+        The arguments are the raw JSON strings produced by the previous stages.
+        """
+        serialized_input = serialize_input({
+            "world": json.loads(world),
+            "characters": json.loads(characters)["characters"],
+            "conflict": json.loads(conflict),
+        })
+        return retrieve_examples(serialized_input)
+
+
+    def format_examples(self, examples):
+        return "\n\n".join(
+            f"Example {n}:\n" + json.dumps({"dialogue": e["dialogue"]}, ensure_ascii=False, indent=2)
+            for n, e in enumerate(examples, 1)
+        )

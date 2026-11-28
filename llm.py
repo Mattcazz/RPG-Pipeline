@@ -1,3 +1,4 @@
+"""The only code that talks to the model server (Ollama, through its OpenAI-compatible API)."""
 import os
 from functools import lru_cache
 
@@ -6,9 +7,11 @@ from dotenv import load_dotenv
 load_dotenv()  # before importing langfuse so the keys are picked up
 
 from langfuse import get_client
-from langfuse.openai import OpenAI
+from langfuse.openai import OpenAI  # traced by Langfuse
+from openai import OpenAI as PlainOpenAI  # not traced
 
-OLLAMA_URL = "http://localhost:11434/v1"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/v1")
+EMBED_MODEL = os.getenv("EMBED_MODEL", "nomic-embed-text")
 
 
 @lru_cache
@@ -54,3 +57,10 @@ def run_llm(
     )
     get_client().flush()
     return response.choices[0].message.content
+
+
+def embed(texts):
+    """Return one embedding vector per text (not traced in Langfuse)."""
+    client = PlainOpenAI(base_url=OLLAMA_URL, api_key="ollama")
+    res = client.embeddings.create(model=EMBED_MODEL, input=texts)
+    return [d.embedding for d in res.data]

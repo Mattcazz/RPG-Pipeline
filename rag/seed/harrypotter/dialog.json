@@ -1,0 +1,55 @@
+{
+
+  "dialogue": [
+
+    {
+
+      "speaker": "Hermione Granger",
+
+      "text": "Put that wand away, Harry! It's past midnight, and if a professor catches us outside the dormitory, Gryffindor will lose fifty house points—or worse, we'll be expelled!"
+
+    },
+
+    {
+
+      "speaker": "Harry Potter",
+
+      "text": "I'm not waiting until morning, Hermione. Someone is trying to steal whatever is hidden on the third floor tonight, and I have to stop them."
+
+    },
+
+    {
+
+      "speaker": "Ron Weasley",
+
+      "text": "Couldn't they steal it tomorrow after breakfast? I'm freezing, it's pitch-black out there, and I'd really rather keep my head attached to my shoulders."
+
+    },
+
+    {
+
+      "speaker": "Hermione Granger",
+
+      "text": "For once, Ron is making sense. We are twelve years old—we barely know half the defensive spells in our textbooks!"
+
+    },
+
+    {
+
+      "speaker": "Harry Potter",
+
+      "text": "I didn't ask either of you to come with me. Go back to bed if you want, but I'm going up to the third floor right now."
+
+    },
+
+    {
+
+      "speaker": "Ron Weasley",
+
+      "text": "Oh, brilliant, make me feel guilty. Grab your wand, Hermione—we can't let him get himself killed without us."
+
+    }
+
+  ]
+
+}

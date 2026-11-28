@@ -1,0 +1,59 @@
+{
+
+  "conflict": "Coach Sue Sylvester takes over the school auditorium during New Directions' reserved rehearsal time right before their regional competition. She orders Santana Lopez—who is both a cheerleader and a choir singer—to help kick Rachel Berry off the stage, forcing Santana to choose between her cheerleading spot and her choir.",
+
+  "conflict_genre": [
+
+    "comedy",
+
+    "drama"
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "characters": [
+
+        "Rachel Berry",
+
+        "Santana Lopez"
+
+      ],
+
+      "description": "Fellow choir singers who constantly trade insults, though both rely on each other's voices to win the competition."
+
+    },
+
+    {
+
+      "characters": [
+
+        "Rachel Berry",
+
+        "Sue Sylvester"
+
+      ],
+
+      "description": "Sworn enemies; Sue mocks Rachel's ambition and tries to sabotage the choir, while Rachel refuses to back down."
+
+    },
+
+    {
+
+      "characters": [
+
+        "Santana Lopez",
+
+        "Sue Sylvester"
+
+      ],
+
+      "description": "Strict cheerleading coach and star flyer; Sue expects Santana to spy on the choir and threatens to cut her from the squad if she defends the singers."
+
+    }
+
+  ]
+
+}

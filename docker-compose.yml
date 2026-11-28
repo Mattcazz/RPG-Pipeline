@@ -1,0 +1,41 @@
+services:
+  mongo:
+    image: mongodb/mongodb-atlas-local:latest   # MongoDB with Atlas Vector Search ($vectorSearch), for local development
+    container_name: rpg-mongo
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"   # only reachable from this machine
+    volumes:
+      - mongo_data:/data/db
+      - mongo_mongot:/data/mongot   # the vector search index data
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: rpg-ollama
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${OLLAMA_PORT:-11434}:11434"   # only reachable from this machine
+    volumes:
+      - ollama_data:/root/.ollama                 # downloaded models live here
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  ollama-pull:
+    image: ollama/ollama:latest
+    container_name: rpg-ollama-pull
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: "no"
+    environment:
+      OLLAMA_HOST: ollama:11434
+      PULL_MODELS: ${PULL_MODELS:-qwen3:4b nomic-embed-text}
+    entrypoint: ["/bin/sh", "-c", "for m in $$PULL_MODELS; do echo \"== $$m\"; ollama pull \"$$m\" || exit 1; done"]
+
+volumes:
+  mongo_data:
+  mongo_mongot:
+  ollama_data:

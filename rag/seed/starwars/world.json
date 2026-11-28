@@ -1,0 +1,22 @@
+{
+  "narrative": "During a galaxy-wide civil war, the Jedi Order acts as peacekeepers for the Galactic Republic, wielding laser swords called lightsabers and channeling the Force—an energy field that grants heightened reflexes and telekinesis. Jedi Knights are trained from youth to suppress strong emotions like anger and attachment.",
+  "genre": "science_fiction",
+  "tone": "dark",
+  "rules": [
+    "Jedi Knights are forbidden from letting anger, fear, or personal attachment cloud their judgment.",
+    "A Jedi Master is responsible for training and guiding their younger apprentice, known as a Padawan.",
+    "Lightsabers are plasma blades used for both defense against laser fire and close-quarters combat."
+  ],
+  "species": ["human"],
+  "classes": ["Jedi Master", "Padawan"],
+  "places": [
+    {
+      "name": "Battlefield",
+      "desc": "A war-torn front line of the galactic civil war where Jedi lead Republic troops."
+    },
+    {
+      "name": "Jedi Temple",
+      "desc": "The Jedi Order's headquarters on Coruscant, where Jedi train and receive their missions."
+    }
+  ]
+}

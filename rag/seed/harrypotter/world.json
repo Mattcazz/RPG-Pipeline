@@ -1,0 +1,22 @@
+{
+  "narrative": "Hogwarts is a hidden British boarding school where young witches and wizards learn to cast spells with wooden wands and brew magical potions. Students are strictly forbidden from wandering the castle corridors after curfew, and breaking school rules costs their house valuable points in the annual House Cup.",
+  "genre": "fantasy",
+  "tone": "happy",
+  "rules": [
+    "Magic is performed using wooden wands and spoken Latin-sounding incantations.",
+    "Students must stay inside their dormitories after curfew; professors patrol the halls and deduct house points for rule-breaking.",
+    "Gryffindor is the school house to which the three main students belong, and losing house points makes them unpopular with classmates."
+  ],
+  "species": ["human"],
+  "classes": ["student", "professor"],
+  "places": [
+    {
+      "name": "Hogwarts corridors",
+      "desc": "Long, dim castle halls patrolled by professors after curfew."
+    },
+    {
+      "name": "Gryffindor common room",
+      "desc": "The warm shared lounge and dormitory area of Gryffindor house."
+    }
+  ]
+}

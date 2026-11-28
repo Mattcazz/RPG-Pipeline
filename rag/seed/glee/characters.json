@@ -1,0 +1,43 @@
+{
+  "characters": [
+    {
+      "name": "Rachel Berry",
+      "desc": "A talented but unpopular sophomore who dreams of Broadway stardom and sings the main solos for New Directions.",
+      "gender": "female",
+      "age": 16,
+      "personality": "The ambitious, theatrical lead singer of New Directions who takes vocal rehearsals very seriously and refuses to be bullied despite being unpopular.",
+      "voice": {
+        "tone": "dramatic and earnest",
+        "speech_style": "Formal, articulate, and overly theatrical, often talking about her singing and stage dreams."
+      },
+      "specie": "human",
+      "traits": ["ambitious", "dramatic", "determined", "perfectionist"]
+    },
+    {
+      "name": "Santana Lopez",
+      "desc": "A star flyer on the Cheerios who is also a gifted singer in New Directions, torn between both groups.",
+      "gender": "female",
+      "age": 16,
+      "personality": "A sharp-tongued teenager who is both a top cheerleader on the Cheerios and a singer in New Directions. Originally sent by her cheerleading coach to spy on the choir, she secretly loves singing and hides her torn loyalties behind tough insults.",
+      "voice": {
+        "tone": "cutting and sarcastic",
+        "speech_style": "Blunt and confrontational, using dry humor and sharp personal insults."
+      },
+      "specie": "human",
+      "traits": ["sarcastic", "conflicted", "competitive", "secretly sensitive"]
+    },
+    {
+      "name": "Sue Sylvester",
+      "desc": "The feared head coach of the Cheerios, obsessed with winning and with destroying the glee club.",
+      "gender": "female",
+      "age": 45,
+      "personality": "The ruthless head coach of the Cheerios who wants to destroy New Directions so they do not take her budget or spotlight. She uses intimidation and insults to keep her cheerleaders obedient.",
+      "voice": {
+        "tone": "deadpan and aggressive",
+        "speech_style": "Rapid-fire insults, demeaning nicknames, and threats about kicking cheerleaders off the squad."
+      },
+      "specie": "human",
+      "traits": ["ruthless", "manipulative", "competitive", "intimidating"]
+    }
+  ]
+}

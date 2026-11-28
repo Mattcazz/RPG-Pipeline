@@ -1,0 +1,59 @@
+{
+
+  "conflict": "Late at night after curfew, Harry Potter insists on sneaking out of the Gryffindor dormitory into the restricted third-floor corridor to investigate a suspicious plot. Hermione Granger tries to stop him to avoid getting expelled and losing house points, while Ron Weasley is caught between wanting to sleep and backing Harry up.",
+
+  "conflict_genre": [
+
+    "comedy",
+
+    "drama"
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "characters": [
+
+        "Harry Potter",
+
+        "Hermione Granger"
+
+      ],
+
+      "description": "Close friends who constantly clash over breaking rules; Harry leads with instinct while Hermione tries to keep them safe and out of trouble."
+
+    },
+
+    {
+
+      "characters": [
+
+        "Harry Potter",
+
+        "Ron Weasley"
+
+      ],
+
+      "description": "Best friends; Ron complains about danger and lost sleep but reliably stands beside Harry."
+
+    },
+
+    {
+
+      "characters": [
+
+        "Hermione Granger",
+
+        "Ron Weasley"
+
+      ],
+
+      "description": "Bickering friends; Hermione criticizes Ron's laziness while Ron mocks her obsession with rules and grades."
+
+    }
+
+  ]
+
+}

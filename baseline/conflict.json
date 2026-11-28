@@ -1,10 +1,16 @@
 {
-  "conflict": "Mira arrives at the village to investigate the lights over the northern pass and the missing patrols. Tobren knows what is happening there and refuses to tell her, because telling her would expose the village to the crown's punishment.",
-  "conflict_genre": ["drama"],
+  "conflict": "While hiding in a rocky ravine in Mordor, Frodo Baggins and Samwise Gamgee are cornered by a patrol of orcs. Sam wants to stand and fight with his short sword so Frodo can escape toward Mount Doom, but Frodo is tempted to put on the One Ring and vanish, which would leave Sam alone against the orcs.",
+  "conflict_genre": [
+    "action",
+    "horror"
+  ],
   "relationships": [
     {
-      "characters": ["Mira Dalvane", "Tobren Ashfield"],
-      "description": "Royal investigator and village elder; mutual distrust, with Mira slowly suspecting Tobren is hiding something."
+      "characters": [
+        "Frodo Baggins",
+        "Samwise Gamgee"
+      ],
+      "description": "Trusting companions in a life-or-death moment; Sam is willing to sacrifice himself to protect Frodo, while Frodo is pulled between loyalty to his friend and the Ring's urge to save itself."
     }
   ]
 }

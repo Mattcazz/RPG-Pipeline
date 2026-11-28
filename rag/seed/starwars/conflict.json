@@ -1,0 +1,16 @@
+{
+  "conflict": "After a chaotic battle, Obi-Wan Kenobi reprimands Anakin Skywalker for abandoning their defensive formation to chase an enemy commander, which nearly got them both killed. Anakin argues that his aggressive move ended the fight faster and accuses Obi-Wan of holding him back.",
+  "conflict_genre": [
+    "action",
+    "drama"
+  ],
+  "relationships": [
+    {
+      "characters": [
+        "Obi-Wan Kenobi",
+        "Anakin Skywalker"
+      ],
+      "description": "Jedi Master and apprentice; deeply loyal to one another, yet clashing constantly over discipline versus impulsiveness."
+    }
+  ]
+}
